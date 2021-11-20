@@ -1,0 +1,103 @@
+﻿<html>
+<head><style>
+    .title::before {
+        content: "console@sreenath:/$root\00a0";
+    }
+::selection {
+    color: black;
+    background: green;
+}
+.cursor {
+  display: inline;
+  border-left: 6px solid green;
+  height: 20px;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+  opacity: 0;
+  animation: blinking 1s linear infinite;
+}
+
+@keyframes blinking {
+  from,
+  49.9% {
+    opacity: 0;
+  }
+  50%,
+  to {
+    opacity: 1;
+  }
+}
+.cursorActive {
+  display: inline;
+  border-left: 6px solid green;
+  height: 20px;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+}
+</style></head>
+<body bgcolor='black' style="cursor: default;">
+<font face='monospace' color='green' id='me'> <span id="title" class="title"></span><div id="cursor" class="cursor"></div></font>
+<script>
+var title = document.getElementById("title");
+const cursor = document.getElementById("cursor");
+
+const textArray = [
+  "My name is Sreenath Sreekrishna",
+  "I like to build cool stuff and to code",
+];
+const typingDelay =  50;
+const eraseDelay = 50;
+const newTextDelay = 2000;
+let textArrayIndex = 0;
+let charIndex = 0;
+
+let type = () => {
+  if (charIndex < textArray[textArrayIndex].length) {
+    if (!cursor.classList.contains("cursorActive"))
+      cursor.classList.remove("cursor");
+      cursor.classList.add("cursorActive");
+    title.innerHTML += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  } else {
+    cursor.classList.remove("cursorActive");
+      cursor.classList.add("cursor");
+      textArrayIndex++;
+      newline();
+  }
+};
+
+let erase = () => {
+  if (charIndex > 0) {
+    if (!cursor.classList.contains("cursorActive"))
+      cursor.classList.add("cursorActive");
+    title.innerHTML = textArray[textArrayIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(erase, eraseDelay);
+  } else {
+    cursor.classList.remove("cursorActive");
+    textArrayIndex++;
+    if (textArrayIndex >= textArray.length) {
+      textArrayIndex = 0;
+    }
+    setTimeout(type, typingDelay + 1100);
+  }
+};
+    let newline = () => {
+        a = document.getElementsByClassName("cursor")[0];
+        b = document.getElementById("title");
+        a.remove();
+        b.id = '';
+        title = b;
+        document.body.innerHTML += "<br><font face='monospace' color='green' id='me'> <span id='title' class='title'></span><div id='cursor' class='cursor'></div></font>"
+    }
+ 
+document.addEventListener("DOMContentLoaded", () => {
+    if (textArray.length) setTimeout(type  , 4400);
+});
+
+</script>
+</body>
+</html>
