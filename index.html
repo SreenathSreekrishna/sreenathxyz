@@ -4,48 +4,26 @@
     <link rel="icon" href="favicon1.ico" type="image/x-icon" />
     <title>Sreenath Sreekrishna</title>
     <style>
-      body {
-        background-color: black;
-        color: white;
+      .tooltip .tooltiptext {
+        position: absolute;
+        width: 120px;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
       }
-      #about{
-        display: flex;
-        padding: 5px;
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
       }
-      #about #headings{
-        background-color: rgb(20,20,20) !important;
-        flex: 0.1;
-        padding-right: 15px;
-        position: fixed;
-      }
-      #about div:not(#headings) {
-        flex: 0.9;
-        padding-left: 100px;
-      }
-      .list-group-item list-group-item-action{
-        background-color: rgb(20,20,20) !important;
+      .tooltip {
+        position: relative;
+        display: inline-block;
       }
     </style>
   </head>
   <body>
-    <h1>About Me</h1>
-    <div id="about">
-      <div id="headings" class="list-group">
-        <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
-        <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
-        <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
-        <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
-      </div>
-      <div data-bs-spy="scroll" data-bs-target="#headings" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-        <h3 id="list-item-1">Item 1</h3>
-        <p>...</p>
-        <h3 id="list-item-2">Item 2</h3>
-        <p>...</p>
-        <h3 id="list-item-3">Item 3</h3>
-        <p>...</p>
-        <h3 id="list-item-4">Item 4</h3>
-        <p>...</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      </div>
+    <div class="accounts">
+      <a href="https://www.github.com/SreenathSreekrishna" class="tooltip"><i class="bi bi-github"></i><span class="tooltiptext">Github - SreenathSreekrishna</span></a>
+      <a href="https://www.discord.com"><i class="bi bi-discord"></i><span class="tooltiptext">Discord - Sreenath#1484</span></a>
     </div>
   </body>
 </html>
