@@ -51,6 +51,9 @@ class TextScramble {
     return this.chars[Math.floor(Math.random() * this.chars.length)]
   }
 }
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 //About Me - I am a seventh grader who likes to cube, code, and read. I study in Delhi Public School Vasant Kunj and am part of the Grey Matters and CEEC clubs.
 const phrases = [
   'About Me - ',
@@ -75,4 +78,5 @@ for (var i=0; i<phrases.length; i++){
   next()
   ab.appendChild(document.createElement("br"))
   ab.appendChild(document.createElement("span"))
+  sleep(100)
 }
