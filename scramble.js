@@ -70,7 +70,7 @@ const next = () => {
 }
 for (var i=0; i<phrases.length; i++){
   var ab = document.querySelector('.about')
-  var el = ab.lastChild
+  var el = ab.lastElementChild
   var fx = new TextScramble(el)
   next()
   ab.appendChild(document.createElement("br"))
