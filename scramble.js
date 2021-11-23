@@ -39,7 +39,7 @@ class TextScramble {
         output += from
       }
     }
-    this.el.innerHTML += output
+    this.el.innerHTML = output
     if (complete === this.queue.length) {
       this.resolve()
     } else {
