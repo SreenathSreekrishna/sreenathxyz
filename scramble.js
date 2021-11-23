@@ -68,9 +68,7 @@ const fx = new TextScramble(el)
 
 let counter = 0
 const next = () => {
-  fx.setText(phrases[counter]).then(() => {
-    setTimeout(next, 800)
-  })
+  fx.setText(phrases[counter])
   counter = (counter + 1) % phrases.length
   el.innerHTML+="<br>"
 }
