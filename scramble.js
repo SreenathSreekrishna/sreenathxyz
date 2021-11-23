@@ -39,7 +39,7 @@ class TextScramble {
         output += from
       }
     }
-    this.el.innerHTML = output
+    this.el.innerHTML += output
     if (complete === this.queue.length) {
       this.resolve()
     } else {
@@ -69,10 +69,10 @@ const fx = new TextScramble(el)
 let counter = 0
 const next = () => {
   fx.setText(phrases[counter]).then(() => {
-    el.innerHTML+="<br>"
     setTimeout(next, 800)
   })
   counter = (counter + 1) % phrases.length
+  el.innerHTML+="<br>"
 }
 
 next()
