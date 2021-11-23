@@ -63,14 +63,17 @@ const phrases = [
   'and CEEC clubs.'
 ]
 
-const el = document.querySelector('.about')
+const el = document.querySelector('.para')
 const fx = new TextScramble(el)
 
 let counter = 0
 const next = () => {
   fx.setText(phrases[counter])
   counter = (counter + 1) % phrases.length
-  el.innerHTML+="<br>"
 }
-
-next()
+for (var i = 0; i<phrases.length; i++){
+  next()
+  el = document.createElement("span");
+  const element = document.querySelector('.about')
+  element.appendChild(para);
+}
