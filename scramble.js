@@ -72,5 +72,7 @@ for (var i=0; i<phrases.length; i++){
   var ab = document.querySelector('.about')
   var el = ab.lastChild
   var fx = new TextScramble(el)
+  next()
   ab.appendChild(document.createElement("br"))
+  ab.appendChild(document.createElement("span"))
 }
