@@ -56,14 +56,10 @@ function sleep(ms) {
 }
 //About Me - I am a seventh grader who likes to cube, code, and read. I study in Delhi Public School Vasant Kunj and am part of the Grey Matters and CEEC clubs.
 const phrases = [
-  'About Me - ',
-  'I am a seventh grader',
-  'who likes to cube, ',
-  'code, ',
-  'and read. ',
+  'About Me - I am a seventh grader',
+  'who likes to cube, code, and read.',
   'I study in Delhi Public School Vasant Kunj ',
-  'and am part of the Grey Matters ',
-  'and CEEC clubs.'
+  'and am part of the Grey Matters and CEEC clubs.'
 ]
 
 let counter = 0
