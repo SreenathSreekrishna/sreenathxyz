@@ -74,5 +74,5 @@ for (var i=0; i<phrases.length; i++){
   next()
   ab.appendChild(document.createElement("br"))
   ab.appendChild(document.createElement("span"))
-  sleep(100)
+  sleep(3000)
 }
