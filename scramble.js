@@ -2,7 +2,7 @@ jQuery(document).ready(function(){
    $('html').mousemove(function(e){
      var rXP = (e.pageX - this.offsetLeft-$(this).width()/2);
      var rYP = (e.pageY - this.offsetTop-$(this).height()/2);
-     $('h1').css('text-shadow', +rYP/5+'px '+rXP/40+'px rgba(227,6,19,.8), '+rYP/4+'px '+rXP/30+'px rgba(255,237,0,1), '+rXP/35+'px '+rYP/6+'px rgba(0,159,227,.7)');
+     $('h1').css('text-shadow', +rYP/30+'px '+rXP/240+'px rgba(227,6,19,.8), '+rYP/24+'px '+rXP/180+'px rgba(255,237,0,1), '+rXP/210+'px '+rYP/18+'px rgba(0,159,227,.7)');
    });
 });
 class TextScramble {
