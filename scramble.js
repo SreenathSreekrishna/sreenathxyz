@@ -1,8 +1,8 @@
 jQuery(document).ready(function(){
    $('html').mousemove(function(e){
-     var rXP = (e.pageX - this.offsetLeft-$(this).width()/4);
-     var rYP = (e.pageY - this.offsetTop-$(this).height()/4);
-     $('h1').css('text-shadow', +rYP/10+'px '+rXP/80+'px rgb(25,25,25)'+rYP/8+'px '+rXP/60+'px rgb(50,50,50), '+rXP/70+'px '+rYP/12+'px rgb(75,75,75)');
+     var rXP = (e.pageX - this.offsetLeft-$(this).width()/2);
+     var rYP = (e.pageY - this.offsetTop-$(this).height()/2);
+     $('h1').css('text-shadow', +rYP/5+'px '+rXP/40+'px rgba(227,6,19,.8), '+rYP/4+'px '+rXP/30+'px rgba(255,237,0,1), '+rXP/35+'px '+rYP/6+'px rgba(0,159,227,.7)');
    });
 });
 class TextScramble {
