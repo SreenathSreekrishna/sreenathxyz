@@ -3,7 +3,7 @@
   --border-size: 2px;
   display: block;
   position: relative;
-  padding: 2em 7em;
+  padding: --y --x;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
