@@ -64,3 +64,68 @@
 .button:hover .button__vertical {
   transform: scaleY(0);
 }
+
+@-webkit-keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.shadow {
+  padding-left: 5px;
+  font-size: 25px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  letter-spacing: 8px;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: sans-serif;
+  background: linear-gradient(to right, #000002 10%, #000001 50%, black 60%);
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: textclip 1.5s linear infinite;
+          animation: textclip 1.5s linear infinite;
+  display: inline-block;
+}
+
+.shadow::after {
+  padding-left: 5px;
+  font-size: 25px;
+  content: "Sreenath";
+  position: absolute;
+  -webkit-background-clip: text;
+  top: 0px;
+  left: 0px;
+  transition: 1s;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: sans-serif;
+  background: linear-gradient(to right, #095fab 10%, #25abe8 50%, #57d75b 60%);
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: textclip 1.5s linear infinite;
+          animation: textclip 1.5s linear infinite;
+  display: inline-block;
+}
+
+.button:hover .shadow:after {
+  top: -3px;
+  left: -3px;
+}
