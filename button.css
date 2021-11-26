@@ -104,7 +104,6 @@
 .shadow::after {
   padding-left: 5px;
   font-size: 25px;
-  content: "Sreenath";
   position: absolute;
   -webkit-background-clip: text;
   top: 0px;
