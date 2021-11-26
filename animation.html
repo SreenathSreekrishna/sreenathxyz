@@ -1,0 +1,139 @@
+<style>
+.button {
+	
+	--offset: 10px;
+	--border-size: 2px;
+	
+	display: block;
+	position: relative;
+	padding: 1.5em 3em;
+	appearance: none;
+	border: 0;
+	background: transparent;
+	color: #ff0000;
+	text-transform: uppercase;
+	letter-spacing: .25em;
+	outline: none;
+	cursor: pointer;
+	font-weight: bold;
+	border-radius: 0;
+	box-shadow: inset 0 0 0 var(--border-size) currentcolor;
+	transition: background .8s ease;
+	
+	&:hover {
+		background: rgba(100, 0, 0, .03);
+	}
+	
+	&__horizontal,
+	&__vertical {
+		position: absolute;
+		top: var(--horizontal-offset, 0);
+		right: var(--vertical-offset, 0);
+		bottom: var(--horizontal-offset, 0);
+		left: var(--vertical-offset, 0);
+		transition: transform .8s ease;
+		will-change: transform;
+		
+		&::before {
+			content: '';
+			position: absolute;
+			border: inherit;
+		}
+	}
+	
+	&__horizontal {
+		--vertical-offset: calc(var(--offset) * -1);
+		border-top: var(--border-size) solid currentcolor;
+		border-bottom: var(--border-size) solid currentcolor;
+		
+		&::before {
+			top: calc(var(--vertical-offset) - var(--border-size));
+			bottom: calc(var(--vertical-offset) - var(--border-size));
+			left: calc(var(--vertical-offset) * -1);
+			right: calc(var(--vertical-offset) * -1);
+		}
+	}
+	
+	&:hover &__horizontal {
+		transform: scaleX(0);
+	}
+	
+	&__vertical {
+		--horizontal-offset: calc(var(--offset) * -1);
+		border-left: var(--border-size) solid currentcolor;
+		border-right: var(--border-size) solid currentcolor;
+		
+		&::before {
+			top: calc(var(--horizontal-offset) * -1);
+			bottom: calc(var(--horizontal-offset) * -1);
+			left: calc(var(--horizontal-offset) - var(--border-size));
+			right: calc(var(--horizontal-offset) - var(--border-size));
+		}
+	}
+	
+	&:hover &__vertical {
+		transform: scaleY(0);
+	}
+	
+}
+@keyframes textclip {
+	to {
+		background-position: 200% center;
+	}
+}
+
+.shadow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  letter-spacing: 8px;
+  cursor: pointer;
+	color: #fff;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-family: sans-serif;
+		background: linear-gradient(to right,#000002 10%, #000001 50%, black 60%);
+		background-size: 200% auto;
+		color: #fff;
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: textclip 1.5s linear infinite;
+		display: inline-block;
+}
+.shadow::after {
+  content: "Sreenath";
+  position: absolute;
+  -webkit-background-clip: text;
+  top: 0px;
+  left: 0px;
+  transition: 1s;
+	color: #fff;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-family: sans-serif;
+		background: linear-gradient(to right,#095fab 10%, #25abe8 50%, #57d75b 60%);
+		background-size: 200% auto;
+		color: #fff;
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: textclip 1.5s linear infinite;
+		display: inline-block;
+}
+.shadow:hover:after {
+  top: -5px;
+  left: -5px;
+} 
+</style>
+
+<body>
+<div class="button">
+<div class="wrapper">
+	<span class="shadow">Sreenath</span>
+</div><div class="button__horizontal"></div>
+	<div class="button__vertical"></div>
+</div>
+</body>
