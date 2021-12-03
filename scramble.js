@@ -6,7 +6,7 @@ jQuery(document).ready(function(){
    });
 });
 $('.colormode').click(function(){
-  var linktag = $($('link')[0]);
+  console.log($($('link')[0]));
 });
 class TextScramble {
   constructor(el) {
