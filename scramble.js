@@ -5,6 +5,9 @@ jQuery(document).ready(function(){
      $('h1').css('text-shadow', +rYP/60+'px '+rXP/480+'px rgba(227,6,19,.8), '+rYP/48+'px '+rXP/360+'px rgba(255,237,0,1), '+rXP/420+'px '+rYP/36+'px rgba(0,159,227,.7)');
    });
 });
+$('.colormode').click(function(){
+  var linktag = $($('link')[0]);
+});
 class TextScramble {
   constructor(el) {
     this.el = el
