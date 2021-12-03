@@ -54,3 +54,6 @@
   font-family:'Verdana';
   padding:30px;
 }
+.colormode:hover{
+  cursor: pointer;
+}
