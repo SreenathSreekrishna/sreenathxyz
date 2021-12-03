@@ -28,9 +28,6 @@
   position: relative;
   display: inline-block;
 }
-.tooltip img{
-  filter: invert(94%) sepia(0%) saturate(24%) hue-rotate(9deg) brightness(105%) contrast(106%);
-}
 .tooltiptext .point {
   width: 0;
   height: 0;
