@@ -1,5 +1,6 @@
 body{
   background-color: black;
+  color: white;
 }
 .introtext{
   font-size: 25px;
@@ -39,7 +40,7 @@ body{
   height: 0;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-top: 7px solid black;
+  border-top: 7px solid #afafaf;
   position: absolute;
   z-index: 1;
   bottom: -20%;
