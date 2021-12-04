@@ -13,6 +13,12 @@ $('.colormode').click(function(){
     linktag.attr('href','main.css');
   }
 });
+$("#btn").click(function(){
+  $("#modal").css('display','block')
+})
+$(".close").click(function(){
+  $("#modal").css('display','none')
+})
 class TextScramble {
   constructor(el) {
     this.el = el
