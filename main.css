@@ -57,7 +57,7 @@
 .colormode:hover{
   cursor: pointer;
 }
-.modal {
+#modal {
   display: none;
   position: fixed;
   z-index: 1;
