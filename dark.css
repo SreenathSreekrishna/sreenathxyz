@@ -81,14 +81,14 @@ body{
   background-color: rgba(0,0,0,0.4);
 }
 .modal-content {
-  background-color: #fefefe;
+  background-color: #111111;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
 }
 .close {
-  color: #aaaaaa;
+  color: #eeeeee;
   float: right;
   font-size: 28px;
   font-weight: bold;
