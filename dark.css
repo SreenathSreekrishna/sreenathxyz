@@ -107,7 +107,7 @@ body{
 }
 .offset {
   --color: #ffffff;
-  --hover: #000000;
+  --hover: #111111;
 }
 button {
   color: var(--color);
