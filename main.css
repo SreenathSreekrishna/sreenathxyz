@@ -115,3 +115,16 @@ button {
   margin: 0.5em;
   padding: 1em 2em;
 }
+.navitem{
+  color: black;
+  background-color: gray;
+}
+.navitem:hover{
+  animation: colorchange 1s linear;
+}
+@keyframes colorchange{
+  to{
+    background-color: #2f2f2f;
+    color:grey;
+  }
+}
