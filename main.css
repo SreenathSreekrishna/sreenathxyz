@@ -120,7 +120,7 @@ button {
   background-color: gray;
 }
 .navitem:hover{
-  animation: colorchange 1s linear;
+  animation: colorchange 1s linear 1s infinite;
 }
 @keyframes colorchange{
   to{
