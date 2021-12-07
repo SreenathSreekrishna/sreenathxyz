@@ -20,10 +20,10 @@ $(".close").click(function(){
   $("#modal").css('display','none')
 })
 $("#academics").click(function(){
-  $(".accontent").css("display","block");
-  $(".otcontent").css("display","none");
+  $(".accontent").toggle();
+  $(".otcontent").toggle();
 })
 $("#other").click(function(){
-  $(".otcontent").css("display","block");
-  $(".accontent").css("display","none");
+  $(".otcontent").toggle();
+  $(".accontent").toggle();
 })
