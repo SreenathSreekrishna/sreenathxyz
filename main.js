@@ -20,10 +20,10 @@ $(".close").click(function(){
   $("#modal").css('display','none')
 })
 $("#academics").click(function(){
-  $("#academics .content").attr("display","block");
-  $("#other .content").attr("display","none");
+  $("#academics .content").css("display","block");
+  $("#other .content").css("display","none");
 })
 $("#other").click(function(){
-  $("#other .content").attr("display","block");
-  $("#academics .content").attr("display","none");
+  $("#other .content").css("display","block");
+  $("#academics .content").css("display","none");
 })
