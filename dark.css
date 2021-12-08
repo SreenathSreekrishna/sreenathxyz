@@ -152,7 +152,7 @@ button {
   border-radius: 3px;
 }
 .material-bubble {
-  background-color: #111111;
+  background-color: transparent;
   color: #e4e4df;
   border: none;
   overflow: hidden;
