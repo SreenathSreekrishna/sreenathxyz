@@ -175,3 +175,19 @@
   transform-origin: 100px 100px;
   transform: scale(1) translate(-10px, -70px);
 }
+.a, .b,.c {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+}
+.c{
+  margin-left:100px;
+}
+.line,.line2 {
+  position:fixed;
+  width: 100%;
+  color: red;
+  height: 5px;
+  background-color: red;
+  display:none;
+}
