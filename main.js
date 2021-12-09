@@ -61,7 +61,7 @@ jQuery(document).ready(function(){
        $(".line,.line2").show()
      }
      var X = (e.pageX);
-     var Y = (e.pageY-10);
+     var Y = (e.pageY);
      $(".b").css({'margin-top':Y,'margin-left':X})
      drawLine('.a', '.b', '.line');
      drawLine('.c', '.b', '.line2');
