@@ -63,7 +63,7 @@ jQuery(document).ready(function(){
      var X = (e.pageX);
      var Y = (e.pageY);
      $(".b").css({'margin-top':Y,'margin-left':X})
-     drawLine('.a', '.b', '.line');
-     drawLine('.c', '.b', '.line2');
+     drawLine('.b', '.a', '.line');
+     drawLine('.b', '.c', '.line2');
    });
 });
