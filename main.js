@@ -46,7 +46,7 @@ function drawLine(a, b, line) {
   var distance = lineDistance(pointA.left, pointA.top, pointB.left, pointB.top);
   $(line).css('transform', 'rotate(' + angle + 'deg)');
   $(line).css('width', distance + 'px');
-  $(line).css('position', 'absolute');
+  $(line).css('position', 'fixed');
   if(pointB.left < pointA.left) {
     $(line).offset({top: pointA.top + pointAcenterY, left: pointB.left + pointBcenterX});
   } else {
