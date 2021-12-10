@@ -27,7 +27,7 @@ $("#other").click(function(){
   $(".otcontent").show();
   $(".accontent").hide();
 })
-var lazer= true;
+var lazer= false;
 function between(x, min, max) {
   return x >= min && x <= max;
 }
