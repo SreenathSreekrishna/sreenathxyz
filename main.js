@@ -53,17 +53,16 @@ function drawLine(a, b, line) {
     $(line).offset({top: pointA.top + pointAcenterY, left: pointA.left + pointAcenterX});
   }
 }
-jQuery(document).ready(function(){
-   $('html').mousemove(function(e){
-     if (!lazer){
-       $(".line,.line2").hide()
-     }else{
-       $(".line,.line2").show()
-     }
-     var X = (e.pageX);
-     var Y = (e.pageY);
-     $(".b").css({'margin-top':Y,'margin-left':X})
-     drawLine('.b', '.a', '.line');
-     drawLine('.b', '.c', '.line2');
-   });
-});
+$('html').mousemove(function (e){
+  if (lazer){
+    $('line').attr({
+      x2:e.pageX.toString(),
+      y2:e.pageY.toString()
+    });
+    $('.introimg img').attr('src','images/anger.jpg');
+  }
+  else{
+    $('.introimg svg').hide()
+    $('.introimg img').attr('src','images/IMG_4317.jpg');
+  }
+})
