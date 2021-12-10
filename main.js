@@ -31,28 +31,6 @@ var lazer= true;
 function between(x, min, max) {
   return x >= min && x <= max;
 }
-function lineDistance(x, y, x0, y0){
-    return Math.sqrt((x -= x0) * x + (y -= y0) * y);
-};
-
-function drawLine(a, b, line) {
-  var pointA = $(a).offset();
-  var pointB = $(b).offset();
-  var pointAcenterX = $(a).width() / 2;
-  var pointAcenterY = $(a).height() / 2;
-  var pointBcenterX = $(b).width() / 2;
-  var pointBcenterY = $(b).height() / 2;
-  var angle = Math.atan2(pointB.top - pointA.top, pointB.left - pointA.left) * 180 / Math.PI;
-  var distance = lineDistance(pointA.left, pointA.top, pointB.left, pointB.top);
-  $(line).css('transform', 'rotate(' + angle + 'deg)');
-  $(line).css('width', distance + 'px');
-  $(line).css('position', 'fixed');
-  if(pointB.left < pointA.left) {
-    $(line).offset({top: pointA.top + pointAcenterY, left: pointB.left + pointBcenterX});
-  } else {
-    $(line).offset({top: pointA.top + pointAcenterY, left: pointA.left + pointAcenterX});
-  }
-}
 $('html').mousemove(function (e){
   if (lazer){
     $('line').attr({
