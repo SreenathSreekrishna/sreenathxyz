@@ -37,10 +37,10 @@ $('html').mousemove(function (e){
       x2:e.pageX.toString(),
       y2:e.pageY.toString()
     });
-    $('.introimg img').attr('src','images/anger.jpg');
+    $('.introimg img').attr('src','images/anger.JPG');
   }
   else{
     $('.introimg svg').hide()
-    $('.introimg img').attr('src','images/IMG_4317.jpg');
+    $('.introimg img').attr('src','images/IMG_4317.JPG');
   }
 })
