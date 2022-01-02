@@ -1,4 +1,5 @@
-jQuery(document).ready(function(){
+$($('link')[0]).attr('href',localStorage.getItem('href'))
+$(document).ready(function(){
    $('html').mousemove(function(e){
      var rXP = (e.pageX - this.offsetLeft-$(this).width()/2);
      var rYP = (e.pageY - this.offsetTop-$(this).height()/2);
@@ -7,6 +8,7 @@ jQuery(document).ready(function(){
 });
 $('.colormode').click(function(){
   var linktag = $($('link')[0]);
+  localStorage.setItem('href',linktag.attr('href'))
   if (linktag.attr('href') === 'main.css'){
     linktag.attr('href','dark.css');
   }else if (linktag.attr('href') === 'dark.css'){
