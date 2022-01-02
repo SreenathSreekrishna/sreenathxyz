@@ -1,4 +1,4 @@
-$($('link')[0]).attr('href',localStorage.getItem('href'))
+if (localStorage.getItem('href')){$($('link')[0]).attr('href',localStorage.getItem('href'))}
 $(document).ready(function(){
    $('html').mousemove(function(e){
      var rXP = (e.pageX - this.offsetLeft-$(this).width()/2);
