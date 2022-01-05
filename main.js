@@ -7,7 +7,7 @@ $(document).ready(function(){
    });
 });
 $('.colormode').click(function(){
-  var linktag = $($('link')[0]))
+  var linktag = $($('link')[0])
   if (linktag.attr('href') === 'main.css'){
     linktag.attr('href','dark.css');
   }else if (linktag.attr('href') === 'dark.css'){
