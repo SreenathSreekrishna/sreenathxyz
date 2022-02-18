@@ -15,19 +15,8 @@ $('.colormode').click(function(){
   }
   localStorage.setItem('href',linktag.attr('href'))
 });
-$("#btn").click(function(){
-  $("#modal").css('display','block')
-})
-$(".close").click(function(){
-  $("#modal").css('display','none')
-})
-$("#academics").click(function(){
-  $(".accontent").show();
-  $(".otcontent").hide();
-})
-$("#other").click(function(){
-  $(".otcontent").show();
-  $(".accontent").hide();
+$('#btn').click(function(){
+    start();
 })
 var lazer= false;
 function between(x, min, max) {
