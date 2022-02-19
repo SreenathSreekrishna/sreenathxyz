@@ -81,37 +81,6 @@ body {
 .colormode{
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAD/ElEQVR4nO2bXYhVVRiGnzWW/aA1hUyl/eiAmRZJRl0kFvTnTykVEUIXDXgRRCXddBXVTRDdhHXhTeB1EYTUhFJYQfRDYGSQFoKSEXghDmON48j0dLHPrtOZc87MOWfttUabB87FnLX2u9/v22vvs9a318Acc8zRDWqf+ry6KLeX5KjXq1+oB3J7SY66UR2x4K3cfpKiblUn/Jeh3J6SoT6jTvpf1uT2lQR1yOb05/ZWOepadbxJ8KO5vVWOulQ93uLqH8ntLwZ9rRrUecB7wECLLqcrcZSYlgkAtgN3tGk/G9nL7KE29E+1GPolh3P7jEGrEfA2sGCaYxdG9jI7UNeof01z9VVPqyG33+io788g+JIluf1GRV3p1NleO+7N7blXGp8B25p8146bInrJwj/B1u7nxzs8/q64djKi3tnB0C/5PbfvXqkf7o91cfw16qpYZnJQn4C1XWo8EcNILgIU9T1ghO4mN0eBwRCCMY2lohwBy+l+ZrcUuDuOnfSUCVjdo86LvRrJRZmAq3vU2aTe3quZHJQJuDyC1isRNJJTJiBGbW+zujmCTlLKBFwWSW+HekkkrSSUCZiIpLcMeDOSVhLKBJyKqPm0+mREvUqpIgEAO9VbI2tWQpmAY5F1FwKfqMsj60anTMDPFWgPAMPq4gq0o1FlAqCYYn+lrqhIv2f6AEIII0BVZe4bgC/VbleblVK/HP6swvMsAj5XX62tPGcfFu/+U7BHXZY73imo/Ra1/hSMqS+pF2WKdYv6aLOGdxMloOSYxUarSxMF/oDF3qZJ9bpmHR5KnICS4+rr6s0VBN1vsbvl+7rz7S3bQ0PnPuAnIOfP1n5gGNgHfBNCGO9UQF0J3ANsAe4D5jd02RhC2AMNCagdPATs6vSkFTEOHAR+qX1+A/6ofcaAK4CLgSXAtcAqiurWlW00fwRWlzXMZgm4EDgEDMaKYpbxcAhhuPxjym9yCOEsxeaI85F99cFDkxFQou6muIfOF84At4UQDtZ/2W5W9ixwolJLaXm5MXhoMwIA1E3AR9P1Owf4FNgQQphsbGg7Lw8hfAy8UZWrRBwFtjYLHmZwZS1em+8CnopsLAUngHXNhn7JjIa2Oh/YDWyIZCwFo8CDIYRv23Wa0dI0hDABPEKxcfJc4CSwfrrgO0adp+5Mt0ToisNWvWdB3ab+mTnQZuxV202DoybhFvWHzAGXjKnbTb1vUb1AfUEdzRj8h+Yuv6uL1R2mvS2+VtdnDbwRdUB9zaLSUwUT6gfO9g2aFv9TeL/6jnqkx6DHLR5uz6lXxfaa5KGhDgLrKHaWrgBupHglv4CiqHGGosBxEviVYvp6APgO2B9CGEvhc445/of8DcP3zfdV61yfAAAAAElFTkSuQmCC')
 }
-#modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
-}
-.modal-content {
-  background-color: #111111;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-.close {
-  color: #eeeeee;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-.close:hover,.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
 
 .offset {
   box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
@@ -139,74 +108,6 @@ button {
   line-height: 1;
   margin: 0.5em;
   padding: 1em 2em;
-}
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-*, *::after, *::before {
-  box-sizing: border-box;
-}
-.material-bubble {
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-}
-.material-bubble {
-  position: relative;
-  border: none;
-  font-size: 18px;
-  transition: color 0.5s, transform 0.2s, background-color 0.2s;
-  outline: none;
-  border-radius: 3px;
-  margin: 0 10px;
-  padding: 23px 33px;
-  border: 3px solid transparent;
-}
-.material-bubble:active {
-  transform: translateY(3px);
-}
-.material-bubble::after, .material-bubble::before {
-  border-radius: 3px;
-}
-.material-bubble {
-  background-color: transparent;
-  color: #e4e4df;
-  border: none;
-  overflow: hidden;
-  box-shadow: none;
-}
-.material-bubble:hover {
-  color: #191919;
-}
-.material-bubble::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 3px solid #e4e4df;
-  transition: opacity 0.3s, border 0.3s;
-}
-.material-bubble:hover::before {
-  opacity: 0;
-}
-.material-bubble::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 200px;
-  background-color: #b7b7a8;
-  border-color: transparent;
-  border-radius: 50%;
-  transform: translate(-10px, -70px) scale(0.1);
-  opacity: 0;
-  z-index: -1;
-  transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
-}
-.material-bubble:hover::after {
-  opacity: 1;
-  transform-origin: 100px 100px;
-  transform: scale(1) translate(-10px, -70px);
 }
 
 #btn {
