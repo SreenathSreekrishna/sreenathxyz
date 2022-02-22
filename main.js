@@ -19,6 +19,7 @@ $('#btn').click(function(){
     start();
     $.get('/achievements', function(data){
         document.documentElement.innerHTML = data;
+        addStyle();
     })
 })
 var lazer= false;
