@@ -91,7 +91,7 @@
   box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
 }
 
-#btn {
+.buttons {
   font-family:'Courier New';
   font-weight:bold;
 }

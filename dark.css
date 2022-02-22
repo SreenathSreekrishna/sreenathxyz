@@ -110,7 +110,7 @@ button {
   padding: 1em 2em;
 }
 
-#btn {
+.buttons {
   font-family:'Courier New';
   font-weight:bold;
 }

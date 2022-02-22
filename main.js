@@ -17,6 +17,9 @@ $('.colormode').click(function(){
 });
 $('#btn').click(function(){
     start();
+    $.get('/achievements', function(data){
+        document.documentElement.innerHTML = data;
+    })
 })
 var lazer= false;
 function between(x, min, max) {

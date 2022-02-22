@@ -4,7 +4,7 @@ var currentHTML;
 
 function start() {
     var color;
-    if (localStorage.getItem('href')==='dark.css'){
+    if (localStorage.getItem('href')==='dark.css' || localStorage.getItem('href')===null){
         color='black';
     }
     else {
