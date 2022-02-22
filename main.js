@@ -20,6 +20,7 @@ $('#btn').click(function(){
     $.get('/achievements', function(data){
         document.documentElement.innerHTML = data;
         addStyle();
+        window.history.pushState("", "Achievements", "/achievements");
     })
 })
 var lazer= false;
