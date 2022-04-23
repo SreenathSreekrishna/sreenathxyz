@@ -1,4 +1,11 @@
 function doit(){
+  function choose(choices) {
+    var index = Math.floor(Math.random() * choices.length);
+    return choices[index];
+  }
+  var imgs = [1027,4317,5455];
+  const imgsrc = `images/IMG_${choose(imgs)}.JPG`;
+  $('.introimg img')[0].src = imgsrc
   if (localStorage.getItem('href')){$($('link')[0]).attr('href',localStorage.getItem('href'))}
   $(document).ready(function(){
     $('html').mousemove(function(e){
@@ -38,7 +45,7 @@ function doit(){
     }
     else{
       $('.introimg svg').hide()
-      $('.introimg img').attr('src','images/IMG_4317.JPG');
+      $('.introimg img').attr('src',imgsrc);
     }
   })
 
