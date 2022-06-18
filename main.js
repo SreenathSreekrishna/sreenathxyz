@@ -4,7 +4,7 @@ function doit(){
     return choices[index];
   }
   var imgs = [1027,4317,5455];
-  const imgsrc = `images/IMG_${choose(imgs)}.JPG`;
+  const imgsrc = `assets/images/IMG_${choose(imgs)}.JPG`;
   $('.introimg img')[0].src = imgsrc
   if (localStorage.getItem('href')){$($('link')[0]).attr('href',localStorage.getItem('href'))}
   $(document).ready(function(){
@@ -41,7 +41,7 @@ function doit(){
         x2:e.pageX.toString(),
         y2:e.pageY.toString()
       });
-      $('.introimg img').attr('src','images/anger.JPG');
+      $('.introimg img').attr('src','assets/images/anger.JPG');
     }
     else{
       $('.introimg svg').hide()
@@ -80,4 +80,8 @@ function doit(){
       }
     );
   }
+  $('.copy').click(function(e){
+    copy('Sreenath#2066')
+    $('.discord')[0].innerHTML = 'Username Copied!'
+  })
 }
